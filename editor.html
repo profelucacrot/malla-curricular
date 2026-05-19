@@ -1,0 +1,23 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Editor de Malla</title><script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script><link rel="stylesheet" href="assets/style.css"></head><body>
+<header><div class="brand">Editor de Asignaturas</div><nav><span class="pill" id="meta">Cargando...</span><a class="btn primary" href="index.html" target="_blank">Ver malla en vivo</a><button class="btn" id="add">Agregar asignatura</button><button class="btn" id="exportCsv">Exportar CSV</button><button class="btn" id="exportJson">Exportar JSON</button><button class="btn danger" id="reset">Restaurar CSV base</button></nav></header>
+<main><section class="panel"><div class="toolbar"><input id="q" placeholder="Buscar por código, nombre, área o semestre..."><select id="semFilter"><option value="">Todos los semestres</option></select><label class="btn">Importar CSV<input id="importCsv" type="file" accept=".csv,text/csv" hidden></label></div><div class="tablewrap"><table class="editor-table"><thead id="thead"></thead><tbody id="tbody"></tbody></table></div></section></main>
+<script src="assets/app.js"></script><script>
+let rows=[];
+const tbody=document.getElementById("tbody"), thead=document.getElementById("thead"), q=document.getElementById("q"), semFilter=document.getElementById("semFilter");
+function refreshMeta(){const total=rows.reduce((a,r)=>a+num(r.creditos),0); document.getElementById("meta").textContent=`${rows.length} asignaturas · ${total} créditos SCT`}
+function renderHeader(){thead.innerHTML="<tr>"+FIELDS.map(([label])=>`<th>${safe(label)}</th>`).join("")+"<th>Acciones</th></tr>"}
+function renderSemFilter(){const current=semFilter.value; const sems=[...new Set(rows.map(r=>r.semestre).filter(Boolean))].sort(semSort); semFilter.innerHTML='<option value="">Todos los semestres</option>'+sems.map(s=>`<option ${s==current?'selected':''}>${safe(s)}</option>`).join("")}
+function visibleRows(){const text=q.value.toLowerCase(), sem=semFilter.value; return rows.filter(r=>(!sem||r.semestre==sem)&&JSON.stringify(r).toLowerCase().includes(text))}
+function inputFor(r,k,i){if(k==="descriptor") return `<select data-i="${i}" data-k="${k}">${AREAS.map(a=>`<option ${r[k]==a?'selected':''}>${safe(a)}</option>`).join("")}</select>`; if(k==="categoria") return `<select data-i="${i}" data-k="${k}"><option></option>${Object.keys(BORDER).map(a=>`<option ${r[k]==a?'selected':''}>${safe(a)}</option>`).join("")}</select>`; if(k==="nombre"||k==="prereqsRaw") return `<textarea data-i="${i}" data-k="${k}">${safe(r[k])}</textarea>`; return `<input data-i="${i}" data-k="${k}" value="${safe(r[k])}">`}
+function render(){refreshMeta(); renderSemFilter(); const vr=visibleRows(); tbody.innerHTML=vr.map(r=>{const i=rows.indexOf(r); return `<tr>${FIELDS.map(([_,k])=>`<td>${inputFor(r,k,i)}</td>`).join("")}<td><button class="btn danger" data-del="${i}">Eliminar</button></td></tr>`}).join("");}
+function persistFromInput(el){const i=Number(el.dataset.i), k=el.dataset.k; if(!rows[i])return; rows[i][k]=["creditos","horasTotales","hp","htp","hpp","hlp","ha","hta","hpa","hla"].includes(k)?num(el.value):el.value; saveRows(rows); refreshMeta();}
+tbody.addEventListener("input",e=>{if(e.target.dataset.k)persistFromInput(e.target)}); tbody.addEventListener("change",e=>{if(e.target.dataset.k)persistFromInput(e.target)});
+tbody.addEventListener("click",e=>{if(e.target.dataset.del){rows.splice(Number(e.target.dataset.del),1); saveRows(rows); render()}});
+q.oninput=render; semFilter.onchange=render;
+document.getElementById("add").onclick=()=>{const nextId=String(Math.max(0,...rows.map(r=>Number(r.id)||0))+1); rows.push({id:nextId,codigo:"NUEVA-"+nextId,nombre:"Nueva asignatura",creditos:0,semestre:"1",descriptor:"Área de Formación Especialidad",horasTotales:0,hp:0,htp:0,hpp:0,hlp:0,ha:0,hta:0,hpa:0,hla:0,prereqsRaw:"",categoria:""}); saveRows(rows); render()};
+document.getElementById("exportCsv").onclick=()=>download("malla_editada.csv",Papa.unparse(toCsvRows(rows)),"text/csv;charset=utf-8");
+document.getElementById("exportJson").onclick=()=>download("malla_editada.json",JSON.stringify(rows,null,2),"application/json");
+document.getElementById("reset").onclick=()=>{clearRows(); boot()};
+document.getElementById("importCsv").onchange=e=>{const file=e.target.files[0]; if(!file)return; Papa.parse(file,{header:true,skipEmptyLines:true,complete:res=>{rows=res.data.map(fromCsvRow); saveRows(rows); render()}})}
+async function boot(){rows=await loadRows(); renderHeader(); render()} boot();
+</script></body></html>
