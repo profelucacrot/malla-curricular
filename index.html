@@ -129,7 +129,9 @@
     }
   };
   document.addEventListener("fullscreenchange", () => {
-    fullscreenBtn.textContent = document.fullscreenElement ? "Salir de pantalla completa" : "Pantalla completa";
+    const isFull = !!document.fullscreenElement;
+    fullscreenBtn.textContent = isFull ? "Salir de pantalla completa" : "Pantalla completa";
+    document.body.classList.toggle("fullscreen-mode", isFull);
   });
 
   boot();
