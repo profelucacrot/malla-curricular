@@ -1,65 +1,64 @@
 ID,Código de Asignatura,Nombre Asignatura,Número de Creditos SCT,Semestre,Tipo de Asignatura,Número de Horas,Número de Horas Presenciales,Número de Horas Teóricas Presenciales,Número de Horas Prácticas Presenciales,Número de Horas de Laboratorio Presenciales,Número de Horas Autónomas,Número de Horas Teóricas Autónomas,Número de Horas Prácticas Autónomas,Número de Horas de Laboratorio Autónomas,Prerrequisitos,Categoría
-4,ESP-101,Introducción a la Programación,9,1,Área de Formación Especialidad,24,10,,,,14,,,,,Normal
-2,ESP-501,Introducción a la Ingeniería (Informática),5,1,Área de Formación Básica,12,6,,,,6,,,,,Normal
-1,FB-001,Álgebra (y Trigonometría),6,1,Área de Formación Básica,11,5,,,,6,,,,,Normal
-14,FB-004,Fundamentos de Cálculo,6,1,Área de Formación Básica,11,5,,,,6,,,,,Normal
-5,FIC-101,Formación Integral Complementaria (1),2,1,Área de Formación Integral Complementaria de Libre Elección,2,1,,,,1,,,,,Normal
-11,FIC-102,Formación Integral Complementaria (2),2,1,Área de Formación Integral Complementaria de Libre Elección,2,1,,,,1,,,,,Normal
-7,ESP-102,Algoritmos y Programación,8,2,Área de Formación Especialidad,19,8,,,,11,,,,4,Normal
-13,ESP-107,Estructura Discretas para Ciencias de la Computación,8,2,Área de Formación Básica,9,4,,,,5,,,,,Normal
-9,FB-002,Álgebra Lineal,6,2,Área de Formación Básica,11,5,,,,6,,,,,Normal
-8,FB-003,Cálculo Diferencial e Integral,6,2,Área de Formación Básica,11,5,,,,6,,,,,Normal
-29,FIC-103,Formación Integral Complementaria (3),2,2,Área de Formación Integral Complementaria de Libre Elección,2,1,,,,1,,,,,Normal
-19,ESP-105,Estructuras de Datos,6,3,Área de Formación Especialidad,16,7,,,,9,,,,7|13,Normal
-43,ESP-502,Gestión de Empresas,4,3,Área de Formación Especialidad,11,5,,,,6,,,,,Normal
-21,FB-005,Cálculo Multivariable,6,3,Área de Formación Básica,11,5,,,,6,,,,,Normal
-6,FIC-201,Inglés Comunicacional I,4,3,Área de Formación Integral Complementaria Obligatoria,9,4,,,,5,,,,,Normal
-101,x,VcM,5,3,Área de Formación Especialidad,9,4,,,,5,,,,,Normal
-102,x,QuImica,5,3,Área de Formación Básica,9,4,,,,5,,,,,Normal
-3,FB-009,Física MecAnica,5,4,Área de Formación Básica,11,5,,,,6,,,,,Normal
-16,ESP-104,Programación Orientada a Objetos,8,4,Área de Formación Especialidad,11,5,,,,6,,,,19,Normal
-43,ESP-508,Gestión Contable y Finanzas,4,4,Área de Formación Especialidad,11,5,,,,6,,,,,Normal
-12,FIC-202,Inglés Comunicacional II,4,4,Área de Formación Integral Complementaria Obligatoria,9,4,,,,5,,,,,Normal
-24,INT-001,Taller Integrador I (ProgramaciOn),4,4,Área de Formación Especialidad,9,4,,,,5,,,,,Integradora
-23,FB-006,Ecuaciones Diferenciales,5,4,Área de Formación Básica,11,5,,,,6,,,,,Normal
-10,FB-010,Electromagnetismo Aplicado,5,5,Área de Formación Básica,11,5,,,,6,,,,,Normal
-28,FB-008,Estadística y Probabilidades,5,5,Área de Formación Básica,11,5,,,,6,,,,,Normal
-15,ESP-103,Fundamentos de Ciencias de la Computación,6,5,Área de Formación Especialidad,15,6,,,,9,,,,19,Normal
-27,ESP-201,Fundamentos de Ingeniería de Software,5,5,Área de Formación Especialidad,19,7,,,,12,,,,,Normal
-38,ESP-503,Economía,4,5,Área de Formación Especialidad,9,4,,,,5,,,,,Normal
-18,FIC-203,Inglés llI,4,5,Área de Formación Integral Complementaria Obligatoria,9,4,,,,5,,,,,Normal
-44,FIC-104,Formación Integral Complementaria (4),2,5,Área de Formación Integral Complementaria de Libre Elección,2,1,,,,1,,,,,Normal
-20,ESP-106,Análisis y Diseño de Algoritmos,5,6,Área de Formación Especialidad,11,5,,,,6,,,,15|28,Normal
-36,ESP-202,Análisis y Diseño de Software,6,6,Área de Formación Especialidad,11,5,,,,6,,,,,Integradora
-26,ESP-401,Base de datos,6,6,Área de Formación Especialidad,16,7,,,,9,,,,19,Normal
-25,FIC-204,Inglés IV,4,6,Área de Formación Integral Complementaria Obligatoria,9,4,,,,5,,,,,Normal
-37,PRA-001,Práctica Laboral,6,6,Área de Formación Práctica,14,6,,,,8,,,,,VcM
-34,ESP-403,Fundamentos de Inteligencia Artificial,4,6,Área de Formación Especialidad,12,5,,,,7,,,,,Normal
-31,FB-012,Optimización,5,7,Área de Formación Básica,9,4,,,,5,,,,,Normal
-42,ESP-204,Arquitectura de Software,5,7,Área de Formación Especialidad,10,4,,,,6,,,,,Normal
-17,ESP-301,Circuitos Digitales y Arquitectura de computadores,6,7,Área de Formación Especialidad,11,5,,,,6,,,,,Normal
-33,ESP-402,Programación y Optimización de Bases de Datos,6,7,Área de Formación Especialidad,16,7,,,,9,,,,,Normal
-41,ESP-404,Aprendizaje Automático,4,7,Área de Formación Especialidad,10,4,,,,6,,,,34,Normal
-61,ESP-406,Aprendizaje Profundo,4,8,Área de Formación Especialidad,10,4,,,,6,,,,41,Normal
-32,ESP-504,Formulación y Gestión de Proyectos de Tecnología de Información,6,7,Área de Formación Especialidad,9,4,,,,5,,,,,Normal
-35,ESP-203,Ingeniería y Calidad de Software,6,8,Área de Formación Especialidad,9,4,,,,5,,,,,Normal
-22,ESP-302,Sistemas Operativos,6,8,Área de Formación Especialidad,11,5,,,,6,,,,,Normal
-48,ESP-405,Ciencias de Datos y Analítica Avanzada,4,8,Área de Formación Especialidad,9,4,,,,5,,,,41,Normal
-56,ESP-505,Sistemas de Información,5,8,Área de Formación Especialidad,11,5,,,,6,,,,,Normal
-46,ESP-506,Innovación Tecnológica y Transformación Digital,5,8,Área de Formación Especialidad,13,6,,,,7,,,,,Normal
-49,ESP-507,Gestión Estratégica de Tecnología de Información,4,8,Área de Formación Especialidad,9,4,,,,5,,,,,Normal
-50,FIC-105,Formación Integral Complementaria (5),2,8,Área de Formación Integral Complementaria de Libre Elección,2,1,,,,1,,,,,Normal
-47,INT-002,Taller Integrador II,5,6,Área de Formación Especialidad,14,6,,,,8,,,,,Integradora
-45,PRA-002,Práctica Profesional    (VcM),13,8,Área de Formación Práctica,14,6,,,,8,,,,,VcM
-55,TIT-001,Seminario de Investigación,5,8,Área de Formación Especialidad,11,5,,,,6,,,,,VcM
+1,ESP-101,Introducción a la Programación,9,1,Área de Formación Especialidad,20,8,,,,12,,,,,Troncal
+2,FB-101,Introducción a la Ingeniería (Informática),5,1,Área de Formación Básica,11,5,,,,6,,,,,Troncal
+3,FB-001,Álgebra (y Trigonometría),6,1,Área de Formación Básica,14,6,,,,8,,,,,Troncal
+4,FB-002,Fundamentos de Cálculo,6,1,Área de Formación Básica,14,6,,,,8,,,,,Troncal
+5,FIC-101,Formación Integral Complementaria (1),2,1,Área de Formación Integral Complementaria de Libre Elección,4,2,,,,2,,,,,Normal
+6,FIC-102,Formación Integral Complementaria (2),2,1,Área de Formación Integral Complementaria de Libre Elección,4,2,,,,2,,,,,Normal
+7,ESP-102,Algoritmos y Programación,8,2,Área de Formación Especialidad,18,7,,,,11,,,,1,Troncal
+8,FB-102,Estructura Discretas para Ciencias de la Computación,8,2,Área de Formación Básica,18,7,,,,11,,,,,Troncal
+9,FB-003,Álgebra Lineal,6,2,Área de Formación Básica,14,6,,,,8,,,,,Troncal
+10,FB-004,Cálculo Diferencial e Integral,6,2,Área de Formación Básica,14,6,,,,8,,,,,Troncal
+11,FIC-103,Formación Integral Complementaria (3),2,2,Área de Formación Integral Complementaria de Libre Elección,4,2,,,,2,,,,,Normal
+12,ESP-103,Estructuras de Datos,6,3,Área de Formación Especialidad,14,6,,,,8,,,,7,Troncal
+13,ESP-501,Gestión de Empresas,4,3,Área de Formación Especialidad,9,4,,,,5,,,,,Troncal
+14,FB-005,Cálculo Multivariable,6,3,Área de Formación Básica,14,6,,,,8,,,,,Troncal
+15,FIC-201,Inglés Comunicacional I,4,3,Área de Formación Integral Complementaria Obligatoria,9,4,,,,5,,,,,Normal
+16,ESP,VcM,4,3,Área de Formación Especialidad,9,4,,,,5,,,,,VcM
+17,ESP-104,Programación Orientada a Objetos,8,4,Área de Formación Especialidad,18,7,,,,11,,,,12,Troncal
+18,ESP-502,Gestión Contable y Finanzas,4,4,Área de Formación Especialidad,9,4,,,,5,,,,13,Troncal
+19,FB-006,Ecuaciones Diferenciales,5,4,Área de Formación Básica,11,5,,,,6,,,,,Troncal
+20,FIC-202,Inglés Comunicacional II,4,4,Área de Formación Integral Complementaria Obligatoria,9,4,,,,5,,,,,Normal
+21,INT-001,Taller Integrador I (ProgramaciOn),4,4,Área de Formación Especialidad,9,4,,,,5,,,,,Integradora
+22,FB-007,Química,5,4,Área de Formación Básica,11,5,,,,6,,,,,Troncal
+23,ESP-105,Fundamentos de Ciencias de la Computación,6,5,Área de Formación Especialidad,14,6,,,,8,,,,12,Troncal
+24,ESP-201,Fundamentos de Ingeniería de Software,5,5,Área de Formación Especialidad,11,5,,,,6,,,,12,Troncal
+25,ESP-503,Economía,4,5,Área de Formación Especialidad,9,4,,,,5,,,,,Troncal
+26,FB-008,Estadística y Probabilidades,4,5,Área de Formación Básica,9,4,,,,5,,,,,Troncal
+27,FB-009,Física MecAnica,5,5,Área de Formación Básica,11,5,,,,6,,,,,Troncal
+28,FIC-104,Formación Integral Complementaria (4),2,5,Área de Formación Integral Complementaria de Libre Elección,4,2,,,,2,,,,,Normal
+29,FIC-203,Inglés Comunicacional III,4,5,Área de Formación Integral Complementaria Obligatoria,9,4,,,,5,,,,,Normal
+30,ESP-106,Análisis y Diseño de Algoritmos,5,6,Área de Formación Especialidad,11,5,,,,6,,,,23|26,Troncal
+31,ESP-202,Análisis y Diseño de Software,6,6,Área de Formación Especialidad,14,6,,,,8,,,,24|32,Troncal
+32,ESP-401,Base de datos,6,6,Área de Formación Especialidad,14,6,,,,8,,,,12,Troncal
+33,FB-010,Electromagnetismo Aplicado,5,6,Área de Formación Básica,11,5,,,,6,,,,,Troncal
+34,FIC-204,Inglés Comunicacional IV,4,6,Área de Formación Integral Complementaria Obligatoria,9,4,,,,5,,,,,Normal
+35,INT-002,Taller Integrador II,5,6,Área de Formación Especialidad,11,5,,,,6,,,,,Integradora
+36,PRA-001,Práctica Laboral,6,6,Área de Formación Práctica,14,6,,,,8,,,,,Troncal
+37,ESP-203,Arquitectura de Software,5,7,Área de Formación Especialidad,11,5,,,,6,,,,31,Troncal
+38,ESP-301,Circuitos Digitales y Arquitectura de computadores,6,7,Área de Formación Especialidad,14,6,,,,8,,,,,Troncal
+39,ESP-402,Programación y Optimización de Bases de Datos,6,7,Área de Formación Especialidad,14,6,,,,8,,,,32,Troncal
+40,ESP-403,Fundamentos de Inteligencia Artificial,4,7,Área de Formación Especialidad,9,4,,,,5,,,,26,Troncal
+41,ESP-504,Formulación y Gestión de Proyectos de Tecnología de Información,6,7,Área de Formación Especialidad,14,6,,,,8,,,,,Troncal
+42,FB-011,Optimización,5,7,Área de Formación Básica,11,5,,,,6,,,,,Troncal
+43,FIC-105,Formación Integral Complementaria (5),2,7,Área de Formación Integral Complementaria de Libre Elección,4,2,,,,2,,,,,Normal
+44,ESP-204,Ingeniería y Calidad de Software,6,8,Área de Formación Especialidad,14,6,,,,8,,,,37,Troncal
+45,ESP-302,Sistemas Operativos,6,8,Área de Formación Especialidad,14,6,,,,8,,,,30|38,Troncal
+46,ESP-404,Aprendizaje Automático,4,8,Área de Formación Especialidad,9,4,,,,5,,,,40,Troncal
+47,ESP-505,Sistemas de Información,4,8,Área de Formación Especialidad,9,4,,,,5,,,,,VcM
+48,ESP-506,Innovación Tecnológica y Transformación Digital,4,8,Área de Formación Especialidad,9,4,,,,5,,,,,Troncal
+49,ESP-507,Gestión Estratégica de Tecnología de Información,6,8,Área de Formación Especialidad,14,6,,,,8,,,,,Troncal
+50,TIT-001,Seminario de Investigación,5,8,Área de Formación Especialidad,11,5,,,,6,,,,,Troncal
 51,ELE-001,Electivo I,5,9,Área de Formación Especialidad,11,5,,,,6,,,,,Normal
-53,ELE-002,Electivo II,5,9,Área de Formación Especialidad,11,5,,,,6,,,,,Normal
-54,ELE-003,Electivo III,5,9,Área de Formación Especialidad,11,5,,,,6,,,,,Normal
-30,ESP-303,Comunicación de Datos y Redes,5,9,Área de Formación Especialidad,12,5,,,,7,,,,,Normal
-52,TIT-002,Anteproyecto de Título,6,9,Área de Formación Práctica,15,6,,,,9,,,,,VcM
+52,ELE-002,Electivo II,5,9,Área de Formación Especialidad,11,5,,,,6,,,,,Normal
+53,ELE-003,Electivo III,5,9,Área de Formación Especialidad,11,5,,,,6,,,,,Normal
+54,ESP-303,Comunicación de Datos y Redes,5,9,Área de Formación Especialidad,11,5,,,,6,,,,33|45,Troncal
+55,ESP-405,Aprendizaje Profundo,4,9,Área de Formación Especialidad,9,4,,,,5,,,,46,Troncal
+56,PRA-002,Práctica Profesional,13,9,Área de Formación Práctica,29,12,,,,17,,,,,Troncal
+57,TIT-002,Anteproyecto de Título,6,9,Área de Formación Práctica,14,6,,,,8,,,,,Integradora
 58,ELE-004,Electivo IV,5,10,Área de Formación Especialidad,11,5,,,,6,,,,,Normal
 59,ELE-005,Electivo V,5,10,Área de Formación Especialidad,11,5,,,,6,,,,,Normal
 60,ELE-006,Electivo VI,5,10,Área de Formación Especialidad,11,5,,,,6,,,,,Normal
-39,ESP-304,Programación Paralela y Distribuida,6,10,Área de Formación Especialidad,11,5,,,,6,,,,,Normal
-40,ESP-305,Infraestructura y Servicio Cloud,4,10,Área de Formación Especialidad,10,4,,,,6,,,,,Normal
-57,TIT-003,Proyecto de Título,15,10,Área de Formación Práctica,33,13,,,,20,,,,,VcM
+61,ESP-304,Programación Paralela y Distribuida,6,10,Área de Formación Especialidad,14,6,,,,8,,,,54,Troncal
+62,ESP-305,Infraestructura y Servicio Cloud,4,10,Área de Formación Especialidad,9,4,,,,5,,,,,Troncal
+63,TIT-003,Proyecto de Título,14,10,Área de Formación Práctica,32,13,,,,19,,,,57,Troncal
