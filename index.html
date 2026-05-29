@@ -103,16 +103,28 @@
   
     const oldTransform = zoomRoot.style.transform;
     const oldWidth = zoomRoot.style.width;
+    const oldPanelOverflow = panel.style.overflow;
+    const oldPanelWidth = panel.style.width;
+    const oldPanelHeight = panel.style.height;
   
+    // Quitar zoom y expandir temporalmente el panel
     zoomRoot.style.transform = "scale(1)";
-    zoomRoot.style.width = "100%";
+    zoomRoot.style.width = "max-content";
+  
+    panel.style.overflow = "visible";
+    panel.style.width = zoomRoot.scrollWidth + "px";
+    panel.style.height = zoomRoot.scrollHeight + "px";
   
     await new Promise(resolve => requestAnimationFrame(resolve));
   
     const canvas = await html2canvas(zoomRoot, {
       backgroundColor: "#0b0f14",
       scale: 2,
-      useCORS: true
+      useCORS: true,
+      width: zoomRoot.scrollWidth,
+      height: zoomRoot.scrollHeight,
+      windowWidth: zoomRoot.scrollWidth,
+      windowHeight: zoomRoot.scrollHeight
     });
   
     const imgData = canvas.toDataURL("image/png");
@@ -141,8 +153,12 @@
     pdf.addImage(imgData, "PNG", x, y, drawW, drawH);
     pdf.save("malla_curricular.pdf");
   
+    // Restaurar estado anterior
     zoomRoot.style.transform = oldTransform;
     zoomRoot.style.width = oldWidth;
+    panel.style.overflow = oldPanelOverflow;
+    panel.style.width = oldPanelWidth;
+    panel.style.height = oldPanelHeight;
   };
   
   function boot(){
