@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Visualizador de Malla · Firebase</title>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -28,6 +30,7 @@
     <button class="btn" id="zoomIn">+ Zoom</button>
     <button class="btn" id="reload">Recargar datos</button>
     <button class="btn" id="fullscreenBtn">Pantalla completa</button>
+    <button class="btn" id="exportPdf">Exportar PDF</button>
   </nav>
 </header>
 
@@ -94,6 +97,54 @@
     document.getElementById("sourceInfo").textContent = "Fuente: Firebase · " + new Date().toLocaleTimeString();
   }
 
+  document.getElementById("exportPdf").onclick = async () => {
+    const panel = document.querySelector(".malla-panel");
+    const zoomRoot = document.getElementById("zoomRoot");
+  
+    const oldTransform = zoomRoot.style.transform;
+    const oldWidth = zoomRoot.style.width;
+  
+    zoomRoot.style.transform = "scale(1)";
+    zoomRoot.style.width = "100%";
+  
+    await new Promise(resolve => requestAnimationFrame(resolve));
+  
+    const canvas = await html2canvas(zoomRoot, {
+      backgroundColor: "#0b0f14",
+      scale: 2,
+      useCORS: true
+    });
+  
+    const imgData = canvas.toDataURL("image/png");
+  
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF({
+      orientation: "landscape",
+      unit: "pt",
+      format: "a4"
+    });
+  
+    const pageW = pdf.internal.pageSize.getWidth();
+    const pageH = pdf.internal.pageSize.getHeight();
+  
+    const imgW = canvas.width;
+    const imgH = canvas.height;
+  
+    const ratio = Math.min(pageW / imgW, pageH / imgH);
+  
+    const drawW = imgW * ratio;
+    const drawH = imgH * ratio;
+  
+    const x = (pageW - drawW) / 2;
+    const y = (pageH - drawH) / 2;
+  
+    pdf.addImage(imgData, "PNG", x, y, drawW, drawH);
+    pdf.save("malla_curricular.pdf");
+  
+    zoomRoot.style.transform = oldTransform;
+    zoomRoot.style.width = oldWidth;
+  };
+  
   function boot(){
     try{
       const app = initializeApp(firebaseConfig);
